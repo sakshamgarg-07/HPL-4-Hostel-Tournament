@@ -23,25 +23,29 @@ const committee = [
     name: "LAKSHYA AGARWAL",
     initials: "LA",
     year: "3RD YEAR",
-    number: "01"
+    number: "01",
+    photo: "/lakshya.png"
   },
   {
     name: "SAKSHAM GARG",
     initials: "SG",
     year: "3RD YEAR",
-    number: "02"
+    number: "02",
+    photo: "/saksham.png"
   },
   {
     name: "SAHIL PARASHAR",
     initials: "SP",
     year: "3RD YEAR",
-    number: "03"
+    number: "03",
+    photo: "/sahil.png"
   },
   {
     name: "SHAGUN SHARMA",
     initials: "SS",
     year: "3RD YEAR",
-    number: "04"
+    number: "04",
+    photo: "/shagun.png"
   }
 ];
 
@@ -246,9 +250,9 @@ function App() {
             {member.number}
           </span>
 
-          <div className="initials">
-            {member.initials}
-          </div>
+          <div className="member-photo">
+  <img src={member.photo} alt={member.name} />
+</div>
 
           <div className="member-info">
 
