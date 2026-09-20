@@ -337,6 +337,10 @@ function App() {
           <div className="socials"><button><Instagram/></button><button><Facebook/></button><button><Send/></button></div>
         </div>
         <div className="container footer-bottom"><span>© 2026 HPL 4.0 · ABES ENGINEERING COLLEGE</span><span>MADE FOR THE HOSTEL COMMUNITY</span></div>
+       <div className="developer-credit">
+  <span>DESIGNED & DEVELOPED BY</span>
+  <strong>SAKSHAM GARG</strong>
+</div>
       </footer>
 
       {showRegister && (

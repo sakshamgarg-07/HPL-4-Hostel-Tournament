@@ -217,3 +217,31 @@ footer{background:#050b07;padding:40px 0 20px}.footer-inner{display:flex;align-i
   object-fit: cover;
   display: block;
 }
+/* Developer Credit */
+
+.developer-credit {
+  margin-top: 55px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(245, 241, 231, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+.developer-credit span {
+  color: #7f8b84;
+}
+
+.developer-credit strong {
+  color: var(--green);
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.developer-credit strong:hover {
+  letter-spacing: 0.22em;
+}
