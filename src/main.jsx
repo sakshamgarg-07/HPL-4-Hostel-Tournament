@@ -10,12 +10,12 @@ import "./styles.css";
 const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdfMSJhIMz69WHDhrgB26alNopd4I0-FYVKBNbawwpcwOFvpg/viewform?usp=dialog";
 
 const schedule = [
-  { date: "25 SEP", time: "09:00 AM", sport: "Cricket", title: "Opening Match", place: "Boys Hostel Cricket Ground", tag: "DAY 01" },
-  { date: "25 SEP", time: "03:30 PM", sport: "Volleyball", title: "League Round 01", place: "Boys Hostel Volleyball Court", tag: "DAY 01" },
-  { date: "26 SEP", time: "09:00 AM", sport: "Cricket", title: "League Matches", place: "Boys Hostel Cricket Ground", tag: "DAY 02" },
-  { date: "26 SEP", time: "04:00 PM", sport: "Volleyball", title: "Semi Finals", place: "Boys Hostel Volleyball Court", tag: "DAY 02" },
-  { date: "27 SEP", time: "10:00 AM", sport: "Cricket", title: "Final", place: "Boys Hostel Cricket Ground", tag: "DAY 03" },
-  { date: "27 SEP", time: "04:30 PM", sport: "Both", title: "Finals + Prize Ceremony", place: "Main Ground", tag: "DAY 03" },
+  { date: "05 OCT", time: "06:00 PM",sport: "Cricket", title: "Opening Match", place: "Boys Hostel Cricket Ground", tag: "DAY 01" },
+  { date: "05 OCT", time: "09:30 PM", sport: "Volleyball", title: "League Round 01", place: "Boys Hostel Volleyball Court", tag: "DAY 01" },
+  { date: "06 OCT", time: "06:00 PM",sport: "Cricket", title: "League Matches", place: " Cricket Ground", tag: "DAY 02" },
+  { date: "06 OCT", time: "09:00 PM", sport: "Volleyball", title: "Semi Finals", place: "Boys Hostel Volleyball Court", tag: "DAY 02" },
+  { date: "07 OCT", time: "08:00 PM", sport: "Cricket", title: "Semi Finals", place: " Cricket Ground", tag: "DAY 03" },
+  { date: "07 OCT", time: "10:30 PM", sport: "Both", title: "Finals ", place: "Cricket Ground and Volleyball Court", tag: "DAY 03" },
 ];
 
 const committee = [
@@ -85,7 +85,7 @@ function App() {
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [activePhoto, setActivePhoto] = useState(0);
   const [faq, setFaq] = useState(null);
-  const countdown = useCountdown("2026-09-25T09:00:00+05:30");
+  const countdown = useCountdown("2026-10-05T09:00:00+05:30");
 
   const filteredSchedule = useMemo(
     () => schedule.filter(x => sport === "All" || x.sport === sport || x.sport === "Both"),
