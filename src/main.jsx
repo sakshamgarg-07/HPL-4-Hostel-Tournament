@@ -296,14 +296,46 @@ function App() {
               <p>One ground. Bright lights. Your team on the field. That's the HPL mood.</p>
             </div>
             <div className="gallery-grid">
-              {[0,1,2].map((x, i) => (
-                <button key={i} className={"gallery-item gi-" + i} onClick={() => {setActivePhoto(i); setGalleryOpen(true)}}>
-                  <img src="/hpl-field.png" alt="HPL night match ground" />
-                  <span>{["MATCH NIGHT","TEAM MOMENTS","HOSTEL PRIDE"][i]}</span>
-                  <Play size={18}/>
-                </button>
-              ))}
-            </div>
+{/* MATCH NIGHT - VIDEO */}
+<div className="gallery-item gi-0 video-item">
+  <video
+    src="/hpl-video.mp4"
+    controls
+    playsInline
+    preload="metadata"
+  />
+  <span>MATCH NIGHT</span>
+</div>
+
+{/* TEAM MOMENTS - EXISTING PHOTO */}
+<button
+  className="gallery-item gi-1"
+  onClick={() => {
+    setActivePhoto(1);
+    setGalleryOpen(true);
+  }}
+>
+  <img src="/hpl-field.png" alt="HPL Team Moments" />
+  <span>TEAM MOMENTS</span>
+  <Play size={18}/>
+</button>
+
+{/* HOSTEL PRIDE - NEW PHOTO */}
+<button
+  className="gallery-item gi-2"
+  onClick={() => {
+    setActivePhoto(2);
+    setGalleryOpen(true);
+  }}
+>
+  <img src="/hostel.png" alt="HPL Hostel Pride" />
+  <span>HOSTEL PRIDE</span>
+  <Play size={18}/>
+</button>
+ 
+  
+
+</div>
           </div>
         </section>
 
@@ -356,13 +388,21 @@ function App() {
         </div>
       )}
 
-      {galleryOpen && (
-        <div className="lightbox" onClick={() => setGalleryOpen(false)}>
-          <button className="lightbox-close"><X/></button>
-          <img src="/hpl-field.png" alt="HPL night match ground" onClick={e => e.stopPropagation()}/>
-          <div className="lightbox-caption">{["MATCH NIGHT","TEAM MOMENTS","HOSTEL PRIDE"][activePhoto]}</div>
-        </div>
-      )}
+     {galleryOpen && (
+  <div className="lightbox" onClick={() => setGalleryOpen(false)}>
+    <button className="lightbox-close"><X/></button>
+
+    <img
+      src={activePhoto === 2 ? "/hostel-pride.png" : "/hpl-field.png"}
+      alt="HPL gallery"
+      onClick={e => e.stopPropagation()}
+    />
+
+    <div className="lightbox-caption">
+      {["MATCH NIGHT","TEAM MOMENTS","HOSTEL PRIDE"][activePhoto]}
+    </div>
+  </div>
+)}
     </div>
   );
 }
